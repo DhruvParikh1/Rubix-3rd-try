@@ -5,7 +5,7 @@ function randomizeCube() {
     var rotations = Math.floor(Math.random() * 40) + 20; // Random number between 20 and 60
 
     // We want the rotations to happen quickly and not be easily followed by the human eye
-    // We can achieve this by queuing up the rotations and having them execute in quick succession
+    // This queues up the rotations and executes them in quick succession
     var i = 0;
     var interval = setInterval(function() {
         // Choose a random face (0 to 5)
@@ -21,8 +21,7 @@ function randomizeCube() {
         if (i >= rotations) {
             clearInterval(interval);
         }
-    }, 200); // Execute a rotation every 50ms
+    }, 200); // Execute a rotation every 200ms
 }
 
-// Add an event listener to the randomize button
 randomizeButton.addEventListener('click', randomizeCube);
