@@ -21,7 +21,7 @@ function randomizeCube() {
         if (i >= rotations) {
             clearInterval(interval);
         }
-    }, 200); // Execute a rotation every 200ms
+    }, 250); // Execute a rotation every x milliseconds
 }
 
 randomizeButton.addEventListener('click', randomizeCube);
